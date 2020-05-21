@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: juliusevpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: juliusevpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: juliusevpipelinesjavascriptdocker 
+          image: myjcgcontainerregistry.azurecr.io/juliusevpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
